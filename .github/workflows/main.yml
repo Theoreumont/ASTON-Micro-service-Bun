@@ -63,5 +63,5 @@ jobs:
                   push: true
                   tags: ${{ steps.meta.outputs.tags }}
                   labels: ${{ steps.meta.outputs.labels }}
-                  env: |
+                  env:
                       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
