@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@commitlint/config-conventional": "^19.1.0",
-    "openai": "^4.32.0"
+    "openai": "^4.32.0",
+    "zod": "^3.22.4"
   },
   "scripts": {
     "prepare": "husky",
