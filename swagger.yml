@@ -1,0 +1,59 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: 'Emotion Detector API'
+  description: 'API for detecting emotions in a given text input using OpenAI.'
+host: 'localhost:3000'
+schemes:
+  - 'http'
+basePath: '/'
+paths:
+  /api/getEmotion:
+    post:
+      summary: 'Detect emotion in text'
+      description: 'Returns the detected emotion of the provided text input.'
+      consumes:
+        - 'application/json'
+      produces:
+        - 'application/json'
+      parameters:
+        - in: 'body'
+          name: 'body'
+          description: 'Text input to analyze for emotion detection.'
+          required: true
+          schema:
+            type: 'object'
+            properties:
+              input:
+                type: 'string'
+                description: 'The text to analyze for emotion.'
+            required:
+              - 'input'
+      responses:
+        '200':
+          description: 'Emotion detected successfully'
+          schema:
+            type: 'object'
+            properties:
+              result:
+                type: 'object'
+                properties:
+                  sentiment:
+                    type: 'string'
+                    description: 'The detected sentiment of the text.'
+              success:
+                type: 'boolean'
+        '400':
+          description: 'Invalid request'
+          schema:
+            $ref: '#/definitions/Error'
+        '500':
+          description: 'Server error'
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Error:
+    type: 'object'
+    properties:
+      message:
+        type: 'string'
