@@ -14,6 +14,11 @@ bun run index.ts
 
 Ce projet a été créé en utilisant `bun init` dans bun v1.1.0. [Bun](https://bun.sh) est un runtime JavaScript tout-en-un rapide.
 
+## Cahier des Charges
+
+Cahier des charges possédant la répartition des tâches, la prévision jour-homme, le prévisionnel financier, le choix technologique, le rôle des différents acteurs et enfin l'infrastructure.
+Il s'agit d'un fichier [Google Docs présent ici](https://docs.google.com/document/d/1ZwmcmR3oZYkAXoW9HOWmghH1J8lIm_O4jh7aIiyg4rw/edit#heading=h.np0w5fb37th7).
+
 ## Workflow de Développement
 
 Notre projet adopte une approche rigoureuse en matière de gestion de version et d'intégration continue/déploiement continu (CI/CD), afin de maintenir une haute qualité de code et de faciliter les déploiements.
